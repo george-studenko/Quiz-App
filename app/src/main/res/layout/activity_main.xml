@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:text="@string/how_much_do_you_know"
+        style="@style/appTitle" />
+    <TextView
+        android:text="@string/when_was_the_euro_introduced_as_legal_currency_on_the_world_market"
+        style="@style/question" />
+    <EditText
+        android:id="@+id/euroAnswer"
+        android:hint="@string/write_your_answer_here"
+        style="@style/answer" />
+    <TextView
+        android:text="@string/which_kind_of_bulbs_were_once_exchanged_as_a_form_of_currency"
+        style="@style/question" />
+    <RadioGroup style="@style/answer">
+        <RadioButton
+            android:text="@string/onions"
+            style="@style/options" />
+        <RadioButton  android:id="@+id/tulips"
+            android:text="@string/tulips"
+            style="@style/options" />
+        <RadioButton
+            android:text="@string/garlic"
+            style="@style/options" />
+        <RadioButton
+            android:text="@string/shallots"
+            style="@style/options" />
+    </RadioGroup>
+
+    <TextView
+        android:text="@string/which_ones_are_the_primary_colours"
+        style="@style/question" />
+    <LinearLayout style="@style/answer" android:orientation="vertical">
+        <CheckBox
+            android:id="@+id/white"
+            android:text="@string/white"
+            style="@style/options" />
+        <CheckBox  android:id="@+id/red"
+            android:text="@string/red"
+            style="@style/options" />
+        <CheckBox
+            android:id="@+id/green"
+            android:text="@string/green"
+            style="@style/options" />
+        <CheckBox android:id="@+id/yellow"
+            android:text="@string/yellow"
+            style="@style/options" />
+        <CheckBox
+            android:id="@+id/orange"
+            android:text="@string/orange"
+            style="@style/options" />
+        <CheckBox android:id="@+id/blue"
+            android:text="@string/blue"
+            style="@style/options" />
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/what_is_the_painting_la_gioconda_more_usually_known_as"
+        style="@style/question" />
+    <EditText
+        android:id="@+id/laGiocondaAnswer"
+        android:hint="@string/write_your_answer_here"
+        style="@style/answer" />
+
+
+    <TextView
+        android:text="@string/how_tall_would_a_double_elephant_folio_book_be"
+        style="@style/question" />
+    <RadioGroup style="@style/answer">
+        <RadioButton
+            android:text="@string/_22_inches"
+            style="@style/options" />
+        <RadioButton
+            android:text="@string/_44_inches"
+            style="@style/options" />
+        <RadioButton
+            android:id="@+id/fiftyInchesRadioButton"
+            android:text="@string/_50_inches"
+            style="@style/options" />
+        <RadioButton
+            android:text="@string/_100_inches"
+            style="@style/options" />
+    </RadioGroup>
+
+    <TextView
+        android:text="@string/in_2011_which_country_hosted_a_formula_1_race_for_the_first_time"
+        style="@style/question" />
+    <EditText
+        android:id="@+id/formula1Answer"
+        android:hint="@string/write_your_answer_here"
+        style="@style/answer" />
+
+
+    <TextView
+        android:text="@string/in_needlework_what_does_ufo_refer_to"
+        style="@style/question" />
+    <RadioGroup style="@style/answer">
+        <RadioButton
+            android:text="@string/undefined_fantastic_object"
+            style="@style/options" />
+        <RadioButton
+            android:id="@+id/ufoAnswer"
+            android:text="@string/unfinished_object"
+            style="@style/options" />
+        <RadioButton
+            android:text="@string/until_further_order_s"
+            style="@style/options" />
+        <RadioButton
+            android:text="@string/unidentified_fms_order"
+            style="@style/options" />
+        <RadioButton
+            android:text="@string/unidentified_flying_object"
+            style="@style/options" />
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_answers"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center"
+        android:onClick="evaluateAnswers"/>
+    </LinearLayout>
+</ScrollView>

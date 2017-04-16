@@ -107,6 +107,10 @@ public class MainActivity extends AppCompatActivity {
         score = Math.round((score * 100) / 7);
         String youScored = getString(R.string.you_scored)+score +"% " + message ;
         Toast.makeText(this,youScored,Toast.LENGTH_LONG).show();
+    public double calculateScoreInPercentage(){
+        return Math.round((score * 100) / 7);
+    }
+
         score=0;
     }
 }

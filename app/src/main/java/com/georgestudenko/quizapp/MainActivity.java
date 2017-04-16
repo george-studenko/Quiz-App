@@ -43,6 +43,37 @@ public class MainActivity extends AppCompatActivity {
         score = 0;
     }
 
+    public String generateMessage(double score){
+        String message="";
+        switch ((int)score){
+            case(0):
+                message = getString(R.string.messageOne);
+                break;
+            case(1):
+                message = getString(R.string.messageTwo);
+                break;
+            case(2):
+                message = getString(R.string.messageThree);
+                break;
+            case(3):
+                message = getString(R.string.messageFour);
+                break;
+            case(4):
+                message = getString(R.string.messageFive);
+                break;
+            case(5):
+                message = getString(R.string.messageSix);
+                break;
+            case(6):
+                message = getString(R.string.messageSeven);
+                break;
+            case(7):
+                message = getString(R.string.messageEight);
+                break;
+        }
+        return message;
+    }
+
     public void evaluateAnswers(View view) {
         // Evaluates Q1
         if(euroEditText.getText().toString().toLowerCase().contains("99") && euroEditText.getText().toString().toLowerCase().contains(getString(R.string.jan))){
@@ -74,36 +105,6 @@ public class MainActivity extends AppCompatActivity {
         if(ufoRadiobutton.isChecked()){
             score++;
         }
-
-        String message ="";
-
-        switch ((int)score){
-            case(0):
-                message = getString(R.string.messageOne);
-                break;
-            case(1):
-                message = getString(R.string.messageTwo);
-                break;
-            case(2):
-                message = getString(R.string.messageThree);
-                break;
-            case(3):
-                message = getString(R.string.messageFour);
-                break;
-            case(4):
-                message = getString(R.string.messageFive);
-                break;
-            case(5):
-                message = getString(R.string.messageSix);
-                break;
-            case(6):
-                message = getString(R.string.messageSeven);
-                break;
-            case(7):
-                message = getString(R.string.messageEight);
-                break;
-        }
-
         score = Math.round((score * 100) / 7);
         String youScored = getString(R.string.you_scored)+score +"% " + message ;
         Toast.makeText(this,youScored,Toast.LENGTH_LONG).show();

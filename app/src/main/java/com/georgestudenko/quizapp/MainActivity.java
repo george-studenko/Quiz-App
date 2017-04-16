@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         return Math.round((score * 100) / 7);
     }
 
+    public void resetScore(){
         score=0;
     }
 }

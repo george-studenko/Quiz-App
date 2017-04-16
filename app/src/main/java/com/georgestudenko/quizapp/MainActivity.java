@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import static android.R.id.message;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText euroEditText;
@@ -105,9 +107,17 @@ public class MainActivity extends AppCompatActivity {
         if(ufoRadiobutton.isChecked()){
             score++;
         }
-        score = Math.round((score * 100) / 7);
+        showFinalScoreMessage();
+    }
+    
+    public void showFinalScoreMessage(){
+        String message = generateMessage(score);
+        score = calculateScoreInPercentage();
         String youScored = getString(R.string.you_scored)+score +"% " + message ;
         Toast.makeText(this,youScored,Toast.LENGTH_LONG).show();
+        resetScore();
+    }
+
     public double calculateScoreInPercentage(){
         return Math.round((score * 100) / 7);
     }

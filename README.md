@@ -8,4 +8,4 @@ The user can submit the answers and gets evaluated.
 This is a native Android app made on Android Studio with Java.
  
 ## Screenshot 
-![alt text](https://gnstudenko.github.io/images/apps/quizz-app.png "Quiz App Screenshot") 
+![alt text](https://george-studenko.github.io/images/apps/quizz-app.png "Quiz App Screenshot") 
